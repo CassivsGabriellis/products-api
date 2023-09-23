@@ -3,10 +3,10 @@ package com.api.productsapi.model;
 public class Product {
 
     private Integer id;
-    private String nome;
-    private Integer quantidade;
-    private Double valor;
-    private String observacao;
+    private String name;
+    private Integer amount;
+    private Double price;
+    private String note;
 
     public Integer getId() {
         return id;
@@ -16,35 +16,35 @@ public class Product {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public Integer getQuantidade() {
-        return quantidade;
+    public Integer getAmount() {
+        return amount;
     }
 
-    public void setQuantidade(Integer quantidade) {
-        this.quantidade = quantidade;
+    public void setAmount(Integer amount) {
+        this.amount = amount;
     }
 
-    public Double getValor() {
-        return valor;
+    public Double getPrice() {
+        return price;
     }
 
-    public void setValor(Double valor) {
-        this.valor = valor;
+    public void setPrice(Double price) {
+        this.price = price;
     }
 
-    public String getObservacao() {
-        return observacao;
+    public String getNote() {
+        return note;
     }
 
-    public void setObservacao(String observacao) {
-        this.observacao = observacao;
+    public void setNote(String note) {
+        this.note = note;
     }
 }
