@@ -1,6 +1,7 @@
 package com.api.productsapi.repository;
 
 import com.api.productsapi.model.Product;
+import com.api.productsapi.model.exception.ResourceNotFoundException;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -11,7 +12,7 @@ import java.util.Optional;
 @Repository
 public class ProductRepository {
 
-    private final List<Product> products = new ArrayList<Product>();
+    private final List<Product> products = new ArrayList<>();
     private Integer lastId = 0;
 
     /**
@@ -67,7 +68,7 @@ public class ProductRepository {
     public Product update(Product product) {
         Optional<Product> foundProduct = getById(product.getId());
         if (foundProduct.isEmpty()) {
-            throw new InputMismatchException("Product not found.");
+            throw new ResourceNotFoundException("Product not found.");
         }
 
         delete(product.getId());
